@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -10,7 +11,7 @@
     <meta name="theme-color" content="#2563eb">
     <title>Daily Polyglot</title>
     
-    <link rel="manifest" href="./assets/manifest-8V3dzEXe.json">
+    <link rel="manifest" href="/daily-lang/assets/manifest-B1c49GFK.json">
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/197/197571.png">
     <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/197/197571.png">
     
@@ -43,13 +44,14 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="./assets/index-DdWo-zmq.js"></script>
+  <script type="module" crossorigin src="/daily-lang/assets/index-DdWo-zmq.js"></script>
 </head>
 <body class="bg-slate-50 dark:bg-slate-900">
     <div id="root"></div>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
+          // Используем относительный путь, который Vite преобразует правильно при сборке
           navigator.serviceWorker.register('./sw.js').catch(err => console.log('SW reg error:', err));
         });
       }
