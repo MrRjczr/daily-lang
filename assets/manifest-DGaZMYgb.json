@@ -2,9 +2,9 @@
 {
   "name": "Daily Polyglot - Учи языки",
   "short_name": "Polyglot",
-  "id": "polyglot-v2",
+  "id": "com.polyglot.daily.ai",
   "description": "Изучай по 3 новых слова каждый день с помощью ИИ.",
-  "start_url": "./",
+  "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#ffffff",

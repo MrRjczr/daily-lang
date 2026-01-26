@@ -1,13 +1,14 @@
 
-const CACHE_NAME = 'polyglot-v11';
+const CACHE_NAME = 'polyglot-v21';
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
+      // ./ означает текущую папку (daily-lang/)
       return cache.addAll([
-        '/daily-lang/',
-        '/daily-lang/index.html',
-        '/daily-lang/manifest.json',
+        './',
+        './index.html',
+        './manifest.json',
         'https://cdn-icons-png.flaticon.com/512/197/197571.png'
       ]);
     })
@@ -33,9 +34,6 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
   
-  // Игнорируем запросы к API и внешним ресурсам для кэширования через SW
-  if (!event.request.url.includes(location.origin)) return;
-
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       if (cachedResponse) return cachedResponse;
