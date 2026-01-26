@@ -1,5 +1,5 @@
 
-const CACHE_NAME = 'polyglot-v7';
+const CACHE_NAME = 'polyglot-v8';
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
