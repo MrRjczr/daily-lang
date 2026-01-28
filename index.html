@@ -12,8 +12,6 @@
     <title>Daily Polyglot</title>
     
     <script>
-      // Жесткий редирект: если в URL есть index.html, мгновенно перекидываем на корень.
-      // Это предотвращает установку PWA с "грязным" адресом.
       (function() {
         const path = window.location.pathname;
         if (path.endsWith('index.html')) {
@@ -23,7 +21,6 @@
       })();
     </script>
 
-    <link rel="manifest" href="/daily-lang/manifest.json">
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/197/197571.png">
     <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/197/197571.png">
     
@@ -56,20 +53,9 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="/daily-lang/assets/index-DImH_LPU.js"></script>
+  <script type="module" crossorigin src="/daily-lang/assets/index-DawYlIDR.js"></script>
 </head>
 <body class="bg-slate-50 dark:bg-slate-900">
     <div id="root"></div>
-    <!-- Путь без начального слэша, чтобы Vite корректно нашел файл в корне проекта -->
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          // Регистрация SW по абсолютному пути для GitHub Pages
-          navigator.serviceWorker.register('/daily-lang/sw.js')
-            .then(reg => console.log('SW registered'))
-            .catch(err => console.log('SW error:', err));
-        });
-      }
-    </script>
 </body>
 </html>
