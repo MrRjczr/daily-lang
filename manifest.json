@@ -1,0 +1,27 @@
+
+{
+  "name": "Daily Polyglot",
+  "short_name": "Polyglot",
+  "id": "polyglot-pwa-v11",
+  "description": "Изучай по 3 новых слова каждый день с помощью ИИ.",
+  "start_url": "index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/610/610413.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/610/610413.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
