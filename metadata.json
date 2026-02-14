@@ -1,0 +1,7 @@
+{
+  "name": "VoxBridge - Live Interview Translator",
+  "description": "A real-time voice translation app designed for job interviews. It listens to multiple languages and provides instant audio and text translations using Gemini Live API.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
